@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Responsive contact page matching the supplied coaching website design.">
-  <title>Coach — Contact</title>
+  <meta name="description" content="Service network page with an interactive India map and marked office locations.">
+  <title>Coach — Service Network</title>
   <link rel="stylesheet" href="assets/styles.css">
 </head>
 <body>
@@ -18,7 +18,8 @@
           <li><a href="about.html">About</a></li>
           <li><a href="services.html">Services</a></li>
           <li><a href="blog.html">Blog</a></li>
-          <li><a class="active" href="contact.html">Contact</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a class="active" href="service-network.html">Network</a></li>
           <li><a href="styles.html">Styles</a></li>
         </ul>
       </nav>
@@ -26,50 +27,35 @@
   </header>
 
   <main>
-    <section class="section">
-      <div class="container contact-grid">
-        <div>
-          <div class="hero-line">
-            <h1 class="contact-title">Let’s get started</h1>
-          </div>
-          <p class="intro-text" style="max-width:38rem; margin-top:2rem;">Vivamus integer non suscipit taciti mus euismod etiam primis tempor sagittis, euismod libero facilisi aptent elementum felis blandit cursus gravida sociis erat ante eleifend lectus nullam dapibus netus feugiat curae curabitur est ad. Metus fringilla euismod ullamcorper aliquam lacinia conubia mauris.</p>
-          <div class="contact-details" style="margin-top:2rem;">
-            <p>Phone +1 000 000 0000</p>
-            <p>Email hello (at) coach.com</p>
-          </div>
-          <div class="socials">
-            <a class="social" href="#" aria-label="LinkedIn">in</a>
-            <a class="social" href="#" aria-label="Twitter">t</a>
-            <a class="social" href="#" aria-label="YouTube">▶</a>
-          </div>
-          <div style="margin-top:4rem; max-width:34rem;">
-            <div class="quote-mark">“</div>
-            <p>Working with Elise was a pleasure and we are very happy with the end result. We now have a foundation we can build upon.</p>
-            <p><em>– Name @company</em></p>
+    <section class="page-hero">
+      <div class="container">
+        <div class="page-title-wrap">
+          <h1>Our Service Network in India</h1>
+        </div>
+        <p class="intro-text" style="max-width:52rem; margin:1.5rem auto 0;">Click any marker to explore where our consulting teams currently support partners. We actively serve Mumbai, Navi Mumbai, Bharuch, and Assam.</p>
+      </div>
+    </section>
+
+    <section class="section" style="padding-top:0;">
+      <div class="container network-grid">
+        <div class="india-map-panel">
+          <div class="india-map-wrap" aria-label="Interactive map of India with service locations">
+            <iframe class="codepen-map" src="https://codepen.io/theajit/full/WNvyVjX" title="India map from CodePen" loading="lazy"></iframe>
+            <img class="map-fallback" src="assets/india-map.svg" alt="Map of India fallback">
+            <button class="map-marker" style="left:31%; top:65%;" data-city="mumbai" aria-label="Mumbai"></button>
+            <button class="map-marker" style="left:33%; top:64%;" data-city="navi-mumbai" aria-label="Navi Mumbai"></button>
+            <button class="map-marker" style="left:29%; top:58%;" data-city="bharuch" aria-label="Bharuch"></button>
+            <button class="map-marker" style="left:74%; top:44%;" data-city="assam" aria-label="Assam"></button>
           </div>
         </div>
-        <div class="contact-card">
-          <h2>Contact Form</h2>
-          <form class="contact-form">
-            <label>
-              <span>Name</span>
-              <input type="text" name="name" placeholder="Your name">
-            </label>
-            <label>
-              <span>Email</span>
-              <input type="email" name="email" placeholder="name@example.com">
-            </label>
-            <label>
-              <span>Subject</span>
-              <input type="text" name="subject" placeholder="How can I help?">
-            </label>
-            <label>
-              <span>Message</span>
-              <textarea name="message" placeholder="Tell me about your project"></textarea>
-            </label>
-            <button class="btn btn-primary" type="submit">Send Message</button>
-          </form>
-        </div>
+
+        <aside class="network-info panel" data-location-panel>
+          <h2>Location details</h2>
+          <p class="meta">Select a marker on the map.</p>
+          <h3 data-location-name>Mumbai</h3>
+          <p data-location-desc>Our Mumbai office supports strategic advisory, operating model design, and leadership workshops for enterprise and growth-stage clients across western India.</p>
+          <p><strong>Focus:</strong> <span data-location-focus>Business evaluations, transformation programs, and executive coaching.</span></p>
+        </aside>
       </div>
     </section>
   </main>
