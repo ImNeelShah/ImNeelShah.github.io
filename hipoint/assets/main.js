@@ -67,6 +67,11 @@ if (locationPanel && mapMarkers.length) {
       desc: 'Our Assam service network delivers regional leadership coaching and remote workshops for teams distributed across North-East India.',
       focus: 'Remote workshops, management enablement, and change communication.',
     },
+    'port-blair': {
+      name: 'Port-Blair',
+      desc: 'Our Assam service network delivers regional leadership coaching and remote workshops for teams distributed across North-East India.',
+      focus: 'Remote workshops, management enablement, and change communication.',
+    },
   };
 
   const setActiveLocation = (cityKey) => {
