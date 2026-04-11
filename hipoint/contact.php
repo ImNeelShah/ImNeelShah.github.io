@@ -135,9 +135,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             </label>
             <button class="btn btn-primary" type="submit">Send Message</button>
           </form>
-          <?php if ($messageStatus != ""): ?>
-            <p><?php echo $messageStatus; ?></p>
-          <?php endif; ?>
         </div>
       </div>
     </section>
