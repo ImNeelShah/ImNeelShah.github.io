@@ -884,3 +884,14 @@ textarea {
   color: #9f2d2d;
   border: 1px solid rgba(199, 75, 75, 0.28);
 }
+
+.service-photo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.service-photo img {
+  display: block;
+  margin: 0 auto;
+}
