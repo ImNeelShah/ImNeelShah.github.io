@@ -1,0 +1,84 @@
+.india-map-wrap {
+  position: relative;
+  width: 100%;
+  max-width: 600px;
+}
+
+.india-map-wrap svg {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* 🔥 HARD RESET FOR MARKERS */
+.map-marker {
+  fill: #e7907d !important;
+  stroke: #ffffff !important;
+  stroke-width: 2 !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+
+  pointer-events: all !important;
+  cursor: pointer;
+
+  transform-origin: center;
+  transition: transform 0.2s ease, fill 0.2s ease;
+}
+
+
+.map-marker.active {
+  fill: #31485d !important;
+  transform: scale(1.5);
+}
+
+/* disable map interference */
+#map * {
+  pointer-events: none !important;
+}
+
+/* TOOLTIP */
+.map-tooltip-card {
+  position: absolute;
+  background: #fff;
+  color: #31485d;
+  padding: 10px 14px;
+  border-radius: 8px;
+  font-size: 12px;
+  width: 180px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+  opacity: 0;
+  transform: translate(-50%, -120%) scale(0.95);
+  transition: all 0.15s ease;
+  z-index: 20;
+}
+
+.map-tooltip-card.show {
+  opacity: 1;
+  transform: translate(-50%, -140%) scale(1);
+}
+
+.tooltip-title {
+  margin: 0 0 4px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.tooltip-desc {
+  margin: 0;
+  font-size: 11px;
+  color: #69798a;
+}
+
+.india-map-wrap {
+  position: relative;
+  z-index: 1;
+}
+
+.india-map-wrap svg {
+  position: relative;
+  z-index: 2;
+}
+
+.map-tooltip-card {
+  z-index: 9999 !important;
+}
