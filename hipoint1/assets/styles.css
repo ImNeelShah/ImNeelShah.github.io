@@ -575,6 +575,7 @@ textarea {
   position: absolute;
   inset: 0;
   background: linear-gradient(rgba(231, 144, 125, 0.88), rgba(231, 144, 125, 0.88)), url('https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1600&q=80') center/cover;
+  /*background: linear-gradient(rgba(41, 22, 111, 0.88), rgba(41, 22, 111, 0.88)), url('https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1600&q=80') center/cover;*/
 }
 
 .footer-inner {
