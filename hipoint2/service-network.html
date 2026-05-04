@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Service network page with an interactive India map and marked office locations.">
+  <title>Network - Hi-Point Services (I) Pvt. Ltd.</title>
+  <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="brand" href="index.html"><img src="img/logo.jpg"><img src="img/companyname.jpg"></a>
+      <button class="nav-toggle" data-nav-toggle aria-expanded="false" aria-label="Open navigation">Menu</button>
+      <nav>
+        <ul class="nav-menu" data-nav-menu>
+          <li><a href="index.html">Home</a></li>
+          <li class="has-submenu">
+            <a href="#">About Us</a>
+            <ul class="submenu">
+              <li><a href="our-history.html">Our History</a></li>
+            </ul>
+          </li>
+          <li><a href="products.html">Products</a></li>
+          <li><a class="active" href="service-network.html">Network</a></li>
+          <li><a href="career.html">Career</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <div class="container">
+        <div class="page-title-wrap">
+          <h1>Our Service Network in India</h1>
+        </div>
+        <p class="intro-text" style="max-width:52rem; margin:1.5rem auto 0;">Click any marker to explore where our consulting teams currently support partners. We actively serve Mumbai, Navi Mumbai, Bharuch, and Assam.</p>
+      </div>
+    </section>
+
+    <section class="section" style="padding-top:0;">
+      <div class="container network-grid">
+        <div class="india-map-panel">
+          <div class="india-map-wrap" aria-label="Interactive map of India with service locations">
+            <iframe class="codepen-map" src="assets/indiamap.html" title="India map" loading="lazy" scrolling="no"></iframe>
+            <!--<img class="map-fallback" src="assets/indiamap.html" alt="Map of India fallback">
+            <button class="map-marker" style="left:28%; top:65%;" data-city="mumbai" aria-label="Mumbai"></button>
+            <button class="map-marker" style="left:33%; top:64%;" data-city="navi-mumbai" aria-label="Navi Mumbai"></button>
+            <button class="map-marker" style="left:29%; top:58%;" data-city="bharuch" aria-label="Bharuch"></button>
+            <button class="map-marker" style="left:74%; top:44%;" data-city="assam" aria-label="Assam"></button>
+            <button class="map-marker" style="left:74%; top:81%;" data-city="port-blair" aria-label="Port Blair"></button>-->
+          </div>
+        </div>
+
+        <aside class="network-info panel" data-location-panel>
+          <h2>Location details</h2>
+          <p class="meta">Select a marker on the map.</p>
+          <h3 data-location-name>Mumbai</h3>
+          <p data-location-desc>Our Mumbai office supports strategic advisory, operating model design, and leadership workshops for enterprise and growth-stage clients across western India.</p>
+          <p><strong>Focus:</strong> <span data-location-focus>Business evaluations, transformation programs, and executive coaching.</span></p>
+        </aside>
+      </div>
+    </section>
+
+
+    <section class="section" style="padding-top:0;">
+      
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="container">
+        <div class="footer-columns">
+          <div>
+            <!--<h3 class="footer-nav-title">Navigation</h3>-->
+            <ul class="footer-nav muted-light">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="our-history.html">Our History</a></li>
+              <li><a href="products.html">Products</a></li>
+              <li><a href="service-network.html">Network</a></li>
+              <li><a href="career.html">Career</a></li>
+              <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="footer-nav-title">Connect</h3>
+            <div class="socials footer-socials">
+              <a class="social" href="#" aria-label="LinkedIn">in</a>
+              <a class="social" href="#" aria-label="Twitter">t</a>
+              <a class="social" href="#" aria-label="YouTube">▶</a>
+            </div>
+          </div>
+          <div>
+            <!--<h2 class="footer-title">Interested in working together?</h2>
+            <p class="muted-light">Vivamus integer non suscipit taciti mus etiam at primis tempor sagittis euismod libero facilisi aptent elementum felis blandit cursus gravida sociis erat ante eleifend lectus.</p>-->
+            <img class="mii" src="img/make-in-india.png" alt="Make in India Logo" style="width: 50%; height: auto;">
+            <br>
+            <img class="mii" src="img/LRQA_UKAS.jpg" alt="LRQA Logo" style="width: 50%; height: auto;">
+            <br>
+          </div>
+        </div>
+        
+        <div class="footer-bottom muted-light">
+          <p>© Your Copyright Message</p>
+          <div class="footer-legal">
+            <!--<a href="styles.html">Privacy Policy</a>
+            <a href="styles.html">Terms of Service</a>-->
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/main.js"></script>
+</body>
+</html>
