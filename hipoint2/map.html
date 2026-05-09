@@ -10,7 +10,7 @@
 <body>
   <header class="site-header">
     <div class="container nav-wrap">
-      <a class="brand" href="index.html"><span class="brand-mark">C</span></a>
+      <a class="brand" href="index.html"><img src="img/Hipoint_Logo.png"></a>
       <button class="nav-toggle" data-nav-toggle aria-expanded="false" aria-label="Open navigation">Menu</button>
       <nav>
         <ul class="nav-menu" data-nav-menu>
@@ -21,8 +21,14 @@
               <li><a href="our-history.html">Our History</a></li>
             </ul>
           </li>
-          <li><a href="products.html">Products</a></li>
-          <li><a href="contact.html">Contact</a></li>
+          <li class="has-submenu">
+            <a href="#">Products</a>
+            <ul class="submenu">
+              <li><a href="system-integrators.html">System Integrators</a></li>
+              <li><a href="manufacturers.html">Manufacturers</a></li>
+            </ul>
+          </li>
+          <li><a href="contact.php">Contact</a></li>
           <li><a href="service-network.html">Network</a></li>
         </ul>
       </nav>
@@ -62,7 +68,7 @@
           <div>
             <h2 class="footer-title">Interested in working together?</h2>
             <p class="muted-light">Vivamus integer non suscipit taciti mus etiam at primis tempor sagittis euismod libero facilisi aptent elementum felis blandit cursus gravida sociis erat ante eleifend lectus.</p>
-            <a class="btn" href="contact.html">Contact Us</a>
+            <a class="btn" href="contact.php">Contact Us</a>
           </div>
           <div>
             <h3 class="footer-nav-title">Navigation</h3>

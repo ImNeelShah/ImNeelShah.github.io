@@ -35,7 +35,7 @@
       <div class="container">
         <div class="contact-card">
           <h2>Career Form</h2>
-          <form class="contact-form">
+          <form class="contact-form" action="career-submit.php" method="POST" enctype="multipart/form-data">
             <label>
               <span>Name</span>
               <input type="text" name="name" placeholder="Your name">
@@ -46,11 +46,11 @@
             </label>
             <label>
               <span>Contact Number</span>
-              <input type="text" name="subject" placeholder="How can I help?">
+              <input type="text" name="subject" placeholder="Your Contact Number">
             </label>
             <label>
-              <span>Attachment</span>
-              <textarea name="message" placeholder="Tell me about your project"></textarea>
+              <span>Upload Resume (Max 5MB)</span>
+              <input type="file" name="attachment" accept=".pdf,.doc,.docx" required>
             </label>
             <button class="btn btn-primary" type="submit">Send Message</button>
           </form>
@@ -102,7 +102,16 @@
       </div>
     </div>
   </footer>
+  <script>
+    document.querySelector('.contact-form').addEventListener('submit', function(e) {
+  const file = document.querySelector('input[name="attachment"]').files[0];
 
+  if (file && file.size > 5 * 1024 * 1024) {
+    alert("File size must be less than 5MB");
+    e.preventDefault();
+  }
+});
+  </script>
   <script src="assets/main.js"></script>
 </body>
 </html>

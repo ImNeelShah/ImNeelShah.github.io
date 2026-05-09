@@ -258,7 +258,7 @@ h4 {
 .hero-image,
 .feature-image,
 .story-photo,
-.service-photo,
+/*.service-photo,*/
 .case-photo {
   min-height: 460px;
   border-radius: 0;
@@ -895,5 +895,36 @@ textarea {
   margin: 0 auto;
   width: 300px;
   height: 300px;
-  object-fit: contain;
+  
 }
+
+.form-message { margin-top: 1rem; font-weight: 600; }
+.form-message:has(✅) { color: green; }   /* or a success class */
+.form-message:has(❌) { color: red; }     /* or an error class */
+
+.more-text {
+      display: none;
+}
+
+/* ── Brand logo responsive sizing ── */
+    .brand img {
+      display: block;
+      width: auto;
+      height: 75px;        /* desktop height */
+      max-width: 220px;    /* never wider than this */
+      object-fit: contain;
+    }
+
+    @media (max-width: 768px) {
+      .brand img {
+        height: 60px;      /* smaller on tablets */
+        max-width: 160px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .brand img {
+        height: 48px;      /* compact on phones */
+        max-width: 130px;
+      }
+    }
