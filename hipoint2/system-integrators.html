@@ -358,10 +358,14 @@
 <script>
     function toggleText(button) {
       const moreText = button.parentElement.querySelector(".more-text");
+      const serviceRow = button.closest(".service-row");
 
       if (moreText.style.display === "inline") {
         moreText.style.display = "none";
         button.textContent = "Know More";
+        if (serviceRow) {
+          serviceRow.scrollIntoView({ behavior: "smooth", block: "start" });
+        }
       } else {
         moreText.style.display = "inline";
         button.textContent = "Know Less";
