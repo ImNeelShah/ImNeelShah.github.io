@@ -158,6 +158,8 @@ svg {
         <circle class="map-marker" cx="295" cy="410" r="5"
           data-label="Mumbai"
           data-desc="Head Office"
+          data-address="310, Gokul Arcade, C.S.T No. 173- A, Swami Nitynand Road, Vile Parle (East) Mumbai - 400 057. INDIA"
+          data-map="https://maps.app.goo.gl/ewvcqXx4FhBTPxDE7?g_st=ac"
           style="fill:rgb(34, 0, 255)"></circle>
 
         <circle class="map-marker" cx="380" cy="410" r="5"
@@ -167,6 +169,8 @@ svg {
         <circle class="map-marker" cx="380" cy="420" r="5"
           data-label="Visakhapatnam"
           data-desc="Office and Workshop"
+          data-address=""
+          data-map="https://maps.app.goo.gl/oAKdJPuDuYd76cvN9?g_st=ac"
           style="fill:rgb(0, 146, 34)"></circle>
 
         <circle class="map-marker" cx="297" cy="380" r="5"
@@ -302,6 +306,12 @@ svg {
           <br>
           <h2 data-location-name>Mumbai</h2>
           <p data-location-desc>Head Office</p>
+          <p data-location-address style="font-size:0.9rem; color:#555; margin-top:0.5rem; line-height:1.5;">310, Gokul Arcade, C.S.T No. 173- A, Swami Nitynand Road, Vile Parle (East) Mumbai - 400 057. INDIA</p>
+          <a data-location-map href="https://maps.app.goo.gl/ewvcqXx4FhBTPxDE7?g_st=ac" target="_blank" rel="noopener noreferrer"
+            style="margin-top:0.75rem; font-size:0.875rem; font-weight:600; color:#fff; background:#31485d;
+                   padding:0.45rem 1rem; border-radius:4px; text-decoration:none; display:inline-block;">
+            &#128205; View on Google Maps
+          </a>
           <!--<p><strong>Focus:</strong> <span data-location-focus>Business evaluations, transformation programs, and executive coaching.</span></p>-->
         </aside>
       </div>
@@ -366,6 +376,8 @@ document.addEventListener('DOMContentLoaded', () => {
   const nameEl = document.querySelector('[data-location-name]');
   const descEl = document.querySelector('[data-location-desc]');
   const focusEl = document.querySelector('[data-location-focus]');
+  const addrEl  = document.querySelector('[data-location-address]');
+  const mapEl   = document.querySelector('[data-location-map]');
 
   // CLICK
   svg.addEventListener('click', (e) => {
@@ -377,7 +389,19 @@ document.addEventListener('DOMContentLoaded', () => {
 
     nameEl.textContent = marker.dataset.label;
     descEl.textContent = marker.dataset.desc;
-    focusEl.textContent = "Active location";
+    if (focusEl) focusEl.textContent = "Active location";
+
+    const addr = marker.dataset.address || '';
+    addrEl.textContent = addr;
+    addrEl.style.display = addr ? 'block' : 'none';
+
+    const mapUrl = marker.dataset.map || '';
+    if (mapUrl) {
+      mapEl.href = mapUrl;
+      mapEl.style.display = 'inline-block';
+    } else {
+      mapEl.style.display = 'none';
+    }
   });
 
   // HOVER SHOW
