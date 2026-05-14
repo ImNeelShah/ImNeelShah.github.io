@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Read More / Less</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 30px;
+      line-height: 1.6;
+    }
+
+    .card {
+      margin-bottom: 25px;
+      padding: 15px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+    }
+
+    .more-text {
+      display: none;
+    }
+
+    button {
+      margin-top: 10px;
+      padding: 8px 14px;
+      border: none;
+      background: #007bff;
+      color: white;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #0056b3;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Section 1 -->
+  <div class="card">
+    <p>
+      This is short content for section 1.
+      <span class="more-text">
+        Here is the extra hidden text for section 1 that appears when clicking Read More.
+      </span>
+    </p>
+    <button onclick="toggleText(this)">Read More</button>
+  </div>
+
+  <!-- Section 2 -->
+  <div class="card">
+    <p>
+      This is short content for section 2.
+      <span class="more-text">
+        Additional hidden information for section 2 goes here.
+      </span>
+    </p>
+    <button onclick="toggleText(this)">Read More</button>
+  </div>
+
+  <!-- Section 3 -->
+  <div class="card">
+    <p>
+      This is short content for section 3.
+      <span class="more-text">
+        Extra hidden content for section 3 displayed after clicking the button.
+      </span>
+    </p>
+    <button onclick="toggleText(this)">Read More</button>
+  </div>
+
+  <script>
+    function toggleText(button) {
+      const moreText = button.parentElement.querySelector(".more-text");
+
+      if (moreText.style.display === "inline") {
+        moreText.style.display = "none";
+        button.textContent = "Read More";
+      } else {
+        moreText.style.display = "inline";
+        button.textContent = "Read Less";
+      }
+    }
+  </script>
+
+</body>
+</html>

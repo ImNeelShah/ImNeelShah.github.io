@@ -158,7 +158,6 @@ svg {
         <circle class="map-marker" cx="295" cy="410" r="5"
           data-label="Mumbai"
           data-desc="Head Office"
-          data-photo="gallery/team-mumbai.jpg"
           data-address="310, Gokul Arcade, C.S.T No. 173- A, Swami Nitynand Road, Vile Parle (East) Mumbai - 400 057. India"
           data-map="https://maps.app.goo.gl/ewvcqXx4FhBTPxDE7?g_st=ac"
           style="fill:rgb(34, 0, 255)"></circle>
@@ -170,7 +169,6 @@ svg {
         <circle class="map-marker" cx="380" cy="420" r="5"
           data-label="Visakhapatnam"
           data-desc="Office and Workshop"
-          data-photo="gallery/team-visakhapatnam.jpg"
           data-address="Survey No.441/1Bayyavaram Village, Kasimkota Mandal, Anakapali - 531 031 Visakhapatnam, Andhra Pradesh, India"
           data-map="https://maps.app.goo.gl/oAKdJPuDuYd76cvN9?g_st=ac"
           style="fill:rgb(0, 146, 34)"></circle>
@@ -261,8 +259,7 @@ svg {
 
         <circle class="map-marker" cx="433" cy="366" r="5"
           data-label="Kolkata"
-          data-desc="Site Office"
-          data-photo="gallery/team-kolkatta.jpg"></circle>
+          data-desc="Site Office"></circle>
           
         <circle class="map-marker" cx="320" cy="440" r="5"
           data-label="Karnataka"
@@ -297,8 +294,7 @@ svg {
 
         <circle class="map-marker" cx="301" cy="428" r="5"
           data-label="Goa"
-          data-desc="Site Office"
-          data-photo="gallery/team-goa.jpg"></circle>
+          data-desc="Site Office"></circle>
 
       </g>
 
@@ -323,10 +319,6 @@ svg {
                    padding:0.45rem 1rem; border-radius:4px; text-decoration:none; display:inline-block;">
             &#128205; View on Google Maps
           </a>
-          <div data-location-photo style="margin-top:1rem;">
-            <img src="gallery/team-mumbai.jpg" alt="Mumbai Head Office Team"
-              style="width:100%; border-radius:6px; object-fit:cover; max-height:180px; display:block;">
-          </div>
           <!--<p><strong>Focus:</strong> <span data-location-focus>Business evaluations, transformation programs, and executive coaching.</span></p>-->
         </aside>
       </div>
@@ -388,12 +380,11 @@ document.addEventListener('DOMContentLoaded', () => {
   const svg = document.querySelector('svg');
   const tooltip = document.getElementById('tooltip');
 
-  const nameEl  = document.querySelector('[data-location-name]');
-  const descEl  = document.querySelector('[data-location-desc]');
+  const nameEl = document.querySelector('[data-location-name]');
+  const descEl = document.querySelector('[data-location-desc]');
   const focusEl = document.querySelector('[data-location-focus]');
   const addrEl  = document.querySelector('[data-location-address]');
   const mapEl   = document.querySelector('[data-location-map]');
-  const photoEl = document.querySelector('[data-location-photo]');
 
   // CLICK
   svg.addEventListener('click', (e) => {
@@ -417,14 +408,6 @@ document.addEventListener('DOMContentLoaded', () => {
       mapEl.style.display = 'inline-block';
     } else {
       mapEl.style.display = 'none';
-    }
-
-    const photo = marker.dataset.photo || '';
-    if (photo) {
-      photoEl.querySelector('img').src = photo;
-      photoEl.style.display = 'block';
-    } else {
-      photoEl.style.display = 'none';
     }
   });
 
