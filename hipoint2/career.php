@@ -119,7 +119,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
               <li><a href="our-history.html">Our History</a></li>
             </ul>
           </li>
-          <li><a href="products.html">Products</a></li>
+          <li class="has-submenu">
+            <a href="#">Products</a>
+            <ul class="submenu">
+              <li><a href="system-integrators.html">System Integrators</a></li>
+              <li><a href="manufacturers.html">Manufacturers</a></li>
+            </ul>
+          </li>
           <li><a href="network.html">Network</a></li>
           <li><a class="active" href="career.php">Career</a></li>
           <li><a href="contact.php">Contact Us</a></li>

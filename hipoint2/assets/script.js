@@ -48,9 +48,30 @@ lightbox.addEventListener("click", (e) => {
   }
 });
 
-// Close on Escape key
+// Keyboard navigation: Escape closes, arrow keys navigate
 document.addEventListener("keydown", (e) => {
-  if (e.key === "Escape") {
-    lightbox.style.display = "none";
-  }
+  if (lightbox.style.display !== "flex") return;
+  if (e.key === "Escape")     lightbox.style.display = "none";
+  if (e.key === "ArrowRight") nextBtn.click();
+  if (e.key === "ArrowLeft")  prevBtn.click();
 });
+
+// Touch swipe support for mobile
+let touchStartX = 0;
+let touchStartY = 0;
+
+lightbox.addEventListener("touchstart", (e) => {
+  touchStartX = e.changedTouches[0].clientX;
+  touchStartY = e.changedTouches[0].clientY;
+}, { passive: true });
+
+lightbox.addEventListener("touchend", (e) => {
+  const dx = e.changedTouches[0].clientX - touchStartX;
+  const dy = e.changedTouches[0].clientY - touchStartY;
+
+  // Treat as horizontal swipe only when it's clearly sideways (> 50 px)
+  if (Math.abs(dx) > Math.abs(dy) && Math.abs(dx) > 50) {
+    if (dx < 0) nextBtn.click();  // swipe left  → next
+    else        prevBtn.click();  // swipe right → prev
+  }
+}, { passive: true });

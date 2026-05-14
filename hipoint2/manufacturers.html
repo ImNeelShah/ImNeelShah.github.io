@@ -55,7 +55,32 @@
         <div class="service-copy">
           <p></p>
           <div class="icon-title"><h1>Sewage Treatment Systems</h1></div>
-          <!--<li><span></span></li>-->
+          <span class="default-text">
+            <ul>
+              <li>State-of-the-art STP manufacturing facility at Bayyavaram, Visakhapatnam spread across 18,500 sq. ft. with complete in-house fabrication and assembly infrastructure.</li>
+              <li>Annual production capacity of 30 Sewage Treatment Plants catering to marine and industrial applications.</li>
+              <li>Equipped with advanced material handling infrastructure including 10T EOT crane and 1.5T stacker for efficient manufacturing operations.</li>
+              <li>Sustainable manufacturing facility supported by a 25 kW rooftop solar power plant.</li>
+              <li>STPs manufactured under license agreement with De Nora Water Technologies and backed by BV Mode II Scheme Certification for Model 6450-G2.</li>
+            </ul>
+          </span>
+          <span class="more-text">
+            <p>Our state-of-the-art manufacturing facility located in Bayyavaram, Visakhapatnam is dedicated to the in-house fabrication and assembly of advanced Sewage Treatment Plants (STPs) for marine and industrial applications. The facility is equipped with modern infrastructure, skilled manpower, and quality-controlled manufacturing processes to ensure reliable and efficient production.</p>
+            <p>Spread across a total plant area of 18,500 sq. ft., the facility houses complete fabrication, assembly, testing, and handling infrastructure for end-to-end STP manufacturing under one roof. The plant has an annual manufacturing capacity of up to 30 STPs, enabling timely execution of multiple projects for commercial and naval sectors.</p>
+            <p>The manufacturing setup includes a 10 Ton capacity EOT crane and a 1.5 Ton capacity stacker, supporting efficient material handling and assembly operations. In line with sustainable manufacturing practices, a 25 kW rooftop solar power plant has also been installed at the facility.</p>
+            <p>The STPs are manufactured under a license agreement with De Nora Water Technologies, ensuring adherence to proven international technology and performance standards. Additionally, our manufacturing process and products are supported by a BV Mode II Scheme Certification for Model 6450-G2, demonstrating compliance with recognized quality and certification requirements.</p>
+            <p><b>Key Highlights:</b></p>
+            <ul>
+              <li>Manufacturing facility located at Bayyavaram, Visakhapatnam</li>
+              <li>Total plant area of 18,500 sq. ft.</li>
+              <li>Complete in-house fabrication and assembly facility for STPs</li>
+              <li>Manufacturing capacity of 30 STPs per annum</li>
+              <li>25 kW rooftop solar power plant installed</li>
+              <li>Equipped with 10T EOT crane and 1.5T stacker</li>
+              <li>STP manufacturing under license agreement with De Nora Water Technologies</li>
+              <li>BV Mode II Scheme Certification for Model 6450-G2</li>
+            </ul>
+          </span>
           <button onclick="toggleText(this)">Know More</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
           <a class="learn-more" href="contact.php">Contact Us →</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
           <a class="learn-more" href="" target="_blank">Website →</a>
@@ -66,13 +91,16 @@
         <div class="service-copy">
           <p></p>
           <div class="icon-title"><h1>Doors and Hatches</h1></div>
+          <span class="default-text">
+            <ul>
           <li><span>Manufacturing of high-quality steel doors and hatches for naval and commercial marine applications.</span></li>
           <li><span>Designed to meet stringent marine and defence standards for strength, safety, and durability.</span></li>
           <li><span>Engineered for watertight, weathertight, and airtight performance in demanding environments.</span></li>
           <li><span>Custom-built solutions to suit vessel-specific requirements and space constraints.</span></li>
           <li><span>Complete capabilities including design, fabrication, testing, and supply.</span></li>
+          </ul>
+          </span>
           <span class="more-text">
-          <br>
           <p>Hi-Point Services (I) Pvt. Ltd., through its sister concern Hi-Point Water Technologies Pvt. Ltd., specializes in the manufacturing of steel doors and hatches for both naval and commercial vessels. These products are designed to meet the rigorous demands of marine environments, ensuring safety, durability, and reliable performance under extreme operating conditions.
           <p>The steel doors and hatches are engineered in compliance with relevant marine and defence standards, offering watertight, weathertight, and airtight sealing based on application requirements. Built using high-quality materials and precision manufacturing processes, these systems are capable of withstanding corrosion, pressure variations, and continuous usage in harsh marine conditions.</p>
           <p>With strong in-house design and manufacturing capabilities, Hi-Point Water Technologies Pvt. Ltd. delivers customized solutions tailored to vessel-specific needs and space constraints. The company supports the complete lifecycle including design, fabrication, testing, and delivery, ensuring consistent quality and performance. This integrated approach enables Hi-Point to provide robust and dependable access solutions for modern marine and offshore platforms.</p></span>
@@ -194,18 +222,41 @@
     </div>
   </footer>
   <script>
-    function toggleText(button) {
-      const moreText = button.parentElement.querySelector(".more-text");
+  function toggleText(button) {
+    const serviceCopy = button.parentElement;
 
-      if (moreText.style.display === "inline") {
-        moreText.style.display = "none";
-        button.textContent = "Know More";
-      } else {
-        moreText.style.display = "inline";
-        button.textContent = "Know Less";
-      }
+    const defaultText = serviceCopy.querySelector(".default-text");
+    const moreText = serviceCopy.querySelector(".more-text");
+
+    const isOpen = moreText.classList.contains("active");
+
+    if (isOpen) {
+      // SHOW original content
+      defaultText.classList.remove("hide");
+
+      setTimeout(() => {
+        defaultText.style.display = "block";
+      }, 300);
+
+      // HIDE expanded content
+      moreText.classList.remove("active");
+
+      button.textContent = "Know More";
+    } else {
+      // HIDE original content
+      defaultText.classList.add("hide");
+
+      setTimeout(() => {
+        defaultText.style.display = "none";
+      }, 300);
+
+      // SHOW expanded content
+      moreText.classList.add("active");
+
+      button.textContent = "Know Less";
     }
-  </script>
+  }
+</script>
   <script src="assets/main.js"></script>
 </body>
 </html>
