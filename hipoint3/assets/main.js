@@ -15,6 +15,31 @@ if (toggle && menu) {
   });
 }
 
+// Click-based submenu toggle (replaces hover)
+document.querySelectorAll('.has-submenu > a').forEach((trigger) => {
+  trigger.addEventListener('click', (e) => {
+    const parent = trigger.closest('.has-submenu');
+    const isOpen = parent.classList.contains('open');
+
+    // Close all other open submenus
+    document.querySelectorAll('.has-submenu.open').forEach((el) => {
+      if (el !== parent) el.classList.remove('open');
+    });
+
+    parent.classList.toggle('open', !isOpen);
+    e.preventDefault();
+  });
+});
+
+// Close submenus when clicking outside
+document.addEventListener('click', (e) => {
+  if (!e.target.closest('.has-submenu')) {
+    document.querySelectorAll('.has-submenu.open').forEach((el) => {
+      el.classList.remove('open');
+    });
+  }
+});
+
 const logoTrack = document.querySelector('[data-logo-track]');
 
 if (logoTrack && logoTrack.children.length > 1) {

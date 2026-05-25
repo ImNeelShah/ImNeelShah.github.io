@@ -179,14 +179,35 @@ h4 {
   background: rgba(49, 72, 93, 0.06);
 }
 
-.has-submenu:hover > .submenu,
-.has-submenu:focus-within > .submenu {
+.has-submenu.open > .submenu {
   display: block;
 }
 
 .hero,
 .page-hero {
-  padding: 4.5rem 0 3rem;
+  padding: 0 0 3rem;
+}
+
+.hero-banner {
+  width: 100%;
+  overflow: hidden;
+  margin-bottom: 2.5rem;
+}
+
+.hero-banner img {
+  width: 100%;
+  height: auto;
+  display: block;
+  max-height: 520px;
+  object-fit: cover;
+  object-position: center;
+}
+
+.hero-text-center {
+  max-width: 860px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 0 1rem;
 }
 
 .hero-grid,
