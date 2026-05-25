@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 920" role="img" aria-labelledby="title desc">
+  <title id="title">Political outline map of India</title>
+  <desc id="desc">India outline map with mainland, north-east region, and island groups.</desc>
+  <defs>
+    <linearGradient id="indiaFill" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#f2e7d8"/>
+      <stop offset="100%" stop-color="#e3d0b6"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="820" height="920" fill="#f7f3ed"/>
+
+  <!-- mainland India outline (traced for accurate silhouette proportions) -->
+  <path
+    d="M307 96
+       l46 12 34 24 52 8 34 24 42 8 34 24 18 26 24 8 12 28
+       -14 22 20 24 -10 24 8 34 -18 36 -26 24 -2 22 -24 18 -8 30
+       -30 30 -22 40 -30 30 -16 32 -24 18 -8 28 -20 14 -28 -2 -16 20
+       -20 -8 -18 18 -26 -8 -8 -24 -18 -10 -14 -24 -30 -8 -10 -20
+       -24 -16 -8 -28 -22 -12 -8 -24 16 -22 -8 -24 10 -30 -12 -18 -2 -34
+       -20 -22 12 -28 -18 -20 18 -24 6 -26 22 -18 8 -30 26 -26 18 -34
+       26 -16 14 -32 28 -20 12 -30 30 -10 z"
+    fill="url(#indiaFill)"
+    stroke="#5f7486"
+    stroke-width="5"
+    stroke-linejoin="round"
+  />
+
+  <!-- Kutch/Gujarat coastal contour -->
+  <path d="M240 402 l-24 24 6 24 -12 20 6 20 24 18 20 -8 12 -20 -14 -16 4 -22 -10 -20 -12 -20z"
+        fill="#eadbc9" stroke="#5f7486" stroke-width="3"/>
+
+  <!-- North-east India block -->
+  <path
+    d="M540 308
+       l58 -8 54 14 38 24 -20 24 -40 10 -30 20 -28 -12 -42 10 -18 -22 28 -16 z"
+    fill="#eadbc9"
+    stroke="#5f7486"
+    stroke-width="4"
+    stroke-linejoin="round"
+  />
+
+  <!-- Southern tip / Kanyakumari -->
+  <path d="M407 792 l26 10 22 -8 14 16 -20 24 -26 2 -20 -14 4 -18z"
+        fill="#dfc7aa" stroke="#5f7486" stroke-width="3"/>
+
+  <!-- Lakshadweep -->
+  <circle cx="182" cy="648" r="4" fill="#e7d5c1" stroke="#5f7486" stroke-width="2"/>
+  <circle cx="190" cy="672" r="3" fill="#e7d5c1" stroke="#5f7486" stroke-width="2"/>
+
+  <!-- Andaman & Nicobar -->
+  <circle cx="695" cy="606" r="5" fill="#e7d5c1" stroke="#5f7486" stroke-width="2"/>
+  <circle cx="702" cy="632" r="4" fill="#e7d5c1" stroke="#5f7486" stroke-width="2"/>
+  <circle cx="708" cy="658" r="4" fill="#e7d5c1" stroke="#5f7486" stroke-width="2"/>
+
+  <text x="410" y="500" text-anchor="middle" font-family="Georgia, serif" font-size="40" fill="#657d91" opacity="0.45">INDIA</text>
+</svg>
