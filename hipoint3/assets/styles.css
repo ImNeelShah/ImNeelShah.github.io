@@ -580,7 +580,7 @@ textarea {
 }
 
 .btn-primary {
-  background: var(--accent);
+  background: rgba(41, 22, 111, 0.88);
   color: #fff;
 }
 
